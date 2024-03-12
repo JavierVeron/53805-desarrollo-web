@@ -1,0 +1,236 @@
+@charset "UTF-8";
+/* Condicionales */
+/* $vista:desktop;
+$h1Desktop: 24px;
+$h1Mobile: 16px;
+
+body {
+    @if $vista == desktop {
+        @media only screen and (min-width:1024px){
+            h1{
+                font-size:$h1Desktop;
+                color: red;
+                background-color: black;
+            }
+        }
+        } @else if $vista == mobile {
+            @media only screen and (max-width:767px){
+                h1{
+                    font-size:$h1Mobile;
+                    font-family: 'Courier New', Courier, monospace;
+                    color: blue;
+                }
+            }
+        } @else {
+            h1{
+                font-size:1rem;
+                color:green;
+            }
+        }
+} */
+/* Bluces */
+.col-md-1 {
+  width: 10%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.col-md-2 {
+  width: 20%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.col-md-3 {
+  width: 30%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.col-md-4 {
+  width: 40%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.col-md-5 {
+  width: 50%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.col-md-6 {
+  width: 60%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.col-md-7 {
+  width: 70%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.col-md-8 {
+  width: 80%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.col-md-9 {
+  width: 90%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.col-md-10 {
+  width: 100%;
+  background-color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+/* Each */
+.blue {
+  color: blue;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.black {
+  color: black;
+}
+
+.pink {
+  color: pink;
+}
+
+.grey {
+  color: grey;
+}
+
+.violet {
+  color: violet;
+}
+
+/* Maps */
+.text-primary {
+  color: blue;
+}
+
+.text-success {
+  color: green;
+}
+
+.text-warning {
+  color: yellow;
+}
+
+.text-danger {
+  color: red;
+}
+
+.btn-primary {
+  color: white;
+  background-color: blue;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-success {
+  color: white;
+  background-color: green;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-warning {
+  color: white;
+  background-color: yellow;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-danger {
+  color: white;
+  background-color: red;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Map-get */
+/* $tipografiaTitulos:(fuente:"Helvetica", tamano:24px, color:black, espacio:20px);
+$tipografiaFuente:(fuente:"Arial", tamano:18px, color:grey, espacio:10px);
+
+.text-title {
+    font-family: map-get($tipografiaTitulos, fuente);
+    font-size: map-get($tipografiaTitulos, tamano);
+    color: map-get($tipografiaTitulos, color);
+    padding: map-get($tipografiaTitulos, espacio);
+}
+
+.text-font {
+    font-family: map-get($tipografiaFuente, fuente);
+    font-size: map-get($tipografiaFuente, tamano);
+    color: map-get($tipografiaFuente, color);
+    padding: map-get($tipografiaFuente, espacio);
+} */
+/* Extend */
+/* .boton {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.boton--aceptar {
+    @extend .boton;
+    background-color: green;
+    border: 1px solid grey;
+}
+
+.boton--cancelar {
+    @extend .boton;
+    background-color: red;
+    border: 1px solid grey;
+} */
+/* Mixins sin parámetros (funciona similar al extend) */
+/* @mixin boton {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.boton--aceptar {
+    @include boton;
+} */
+/* Mixins con parámetros */
+.alert-primary {
+  color: blue;
+  background-color: lightblue;
+  font-size: 16px;
+  padding: 20px;
+  border: 1px solid blue;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.alert-danger {
+  color: red;
+  background-color: #ffaaaa;
+  font-size: 16px;
+  padding: 20px;
+  border: 1px solid red;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/*# sourceMappingURL=styles.css.map */

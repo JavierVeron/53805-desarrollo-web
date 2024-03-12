@@ -1,0 +1,152 @@
+/* Condicionales */
+/* $vista:desktop;
+$h1Desktop: 24px;
+$h1Mobile: 16px;
+
+body {
+    @if $vista == desktop {
+        @media only screen and (min-width:1024px){
+            h1{
+                font-size:$h1Desktop;
+                color: red;
+                background-color: black;
+            }
+        }
+        } @else if $vista == mobile {
+            @media only screen and (max-width:767px){
+                h1{
+                    font-size:$h1Mobile;
+                    font-family: 'Courier New', Courier, monospace;
+                    color: blue;
+                }
+            }
+        } @else {
+            h1{
+                font-size:1rem;
+                color:green;
+            }
+        }
+} */
+
+
+
+/* Bluces */
+@for $i from 1 through 10 {
+	.col-md-#{$i} {
+	    width:10% * $i;
+        background-color: #CCCCCC;
+        margin-bottom: 10px;
+	}
+}
+
+
+
+/* Each */
+@each $color in blue, yellow, black {
+	.#{$color}{
+	    color:#{$color};
+	}
+}
+
+@each $color in pink, grey, violet {
+	.#{$color}{
+	    color:#{$color};
+	}
+}
+
+
+
+/* Maps */
+$colores:(primary:blue, success:green, warning:yellow, danger:red);
+
+@each $clave, $valor in $colores {
+    .text-#{$clave} {
+        color:#{$valor};
+    }
+}
+
+@each $clave, $valor in $colores {
+    .btn-#{$clave} {
+        color:white;
+        background-color:#{$valor};
+        padding: 10px 20px 10px 20px;
+        border-radius:8px;
+        border:none;
+    }
+}
+
+/* Map-get */
+/* $tipografiaTitulos:(fuente:"Helvetica", tamano:24px, color:black, espacio:20px);
+$tipografiaFuente:(fuente:"Arial", tamano:18px, color:grey, espacio:10px);
+
+.text-title {
+    font-family: map-get($tipografiaTitulos, fuente);
+    font-size: map-get($tipografiaTitulos, tamano);
+    color: map-get($tipografiaTitulos, color);
+    padding: map-get($tipografiaTitulos, espacio);
+}
+
+.text-font {
+    font-family: map-get($tipografiaFuente, fuente);
+    font-size: map-get($tipografiaFuente, tamano);
+    color: map-get($tipografiaFuente, color);
+    padding: map-get($tipografiaFuente, espacio);
+} */
+
+
+
+/* Extend */
+/* .boton {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.boton--aceptar {
+    @extend .boton;
+    background-color: green;
+    border: 1px solid grey;
+}
+
+.boton--cancelar {
+    @extend .boton;
+    background-color: red;
+    border: 1px solid grey;
+} */
+
+
+
+/* Mixins sin parámetros (funciona similar al extend) */
+/* @mixin boton {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.boton--aceptar {
+    @include boton;
+} */
+
+
+/* Mixins con parámetros */
+@mixin contenedor($colorFuente, $colorFondo, $tamanoFuente, $espaciado, $colorBorde) {
+    color: $colorFuente;
+    background-color: $colorFondo;
+    font-size: $tamanoFuente;
+    padding: $espaciado;
+    border:1px solid $colorBorde;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.alert-primary {
+    @include contenedor(blue, lightblue, 16px, 20px, blue)
+}
+
+.alert-danger {
+    @include contenedor(red, #ffaaaa, 16px, 20px, red)
+}
